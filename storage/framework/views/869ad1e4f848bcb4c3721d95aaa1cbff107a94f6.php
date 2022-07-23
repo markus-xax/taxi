@@ -2,16 +2,13 @@
 <?php $__env->startSection('body'); ?>
     <div class="container">
     <p>
-        <h3>Ищем лучшего водителя</h3>
-        <p><small>При принятии заказа вас перенаправит на старницу поезки, ожидайте</small></p>
+        <b>Ищем лучшего водителя</b>
     </p>
-    <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $driver): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-        <p>
-            <div class="alert alert-info">
-            Водитель <b><?php echo e($driver->name); ?></b> свободен
+        <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $el): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <div class="alert alert-success">
+        Водитель <?php echo e($el->name); ?> свободен
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div>
-        </p>
-    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>
 <?php $__env->stopSection(); ?>
 

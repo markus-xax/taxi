@@ -11,32 +11,33 @@
     <header class="d-flex justify-content-center py-3">
         <ul class="nav nav-pills">
             <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">На главную</a></li>
-            <li class="nav-item"><a href="/sum" class="nav-link">Стоимость</a></li>
             <?php echo $__env->yieldContent('nav'); ?>
+            <li class="nav-item"><a href="/sum" class="nav-link">Стоимость</a></li>
         </ul>
     </header>
 </div>
 <?php if(session()->has('success')): ?>
+    <div class="container">
     <div class="alert alert-success">
         <?php echo e(session()->get('success')); ?>
 
     </div>
+    </div>
 <?php endif; ?>
 <?php if(session()->has('error')): ?>
-    <div class="alert-alert-danger">
+    <div class="container">
+    <div class="alert alert-danger">
         <?php echo e(session()->get('error')); ?>
 
     </div>
+    </div>
 <?php endif; ?>
 <?php if($errors->any()): ?>
-    <div class="container">
-        <div class="alert alert-danger">
-            <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <li>
-                    <?php echo e($error); ?>
-
-                </li>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        <div class="container">
+            <div class="alert alert-danger">
+        <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <li><?php echo e($error); ?></li>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
     </div>
 <?php endif; ?>

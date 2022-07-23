@@ -1,27 +1,17 @@
 <?php $__env->startSection('title'); ?>Поездка<?php $__env->stopSection(); ?>
 <?php $__env->startSection('body'); ?>
     <div class="container">
-        <p>
-            <div class="alert alert-info">
-            <?php echo e($data->backyard); ?>
-
-            <?php echo e($data->street); ?>
-
-            <?php echo e($data->home); ?>
-
+        <div class="alert alert-info">
+            <h3>Город: <?php echo e($data->backyard); ?></h3>
+            <h5>Улица: <?php echo e($data->street); ?></h5>
+            <h5>Дом: <?php echo e($data->home); ?></h5>
+            <small> Пассажиры: <?php echo e($data->amountH); ?></small>
+            <small>Дети: <?php echo e($data->amountC); ?></small>
+            <h3>Город прибытия: <?php echo e($data->backyard); ?></h3>
+            <h3>Улица: <?php echo e($data->streetOld); ?></h3>
+            <h3>Дом: <?php echo e($data->homeOld); ?></h3>
         </div>
-        </p>
-        <p>
-            <div class="alert alert-info">
-            <?php echo e($data->backyardOld); ?>
-
-            <?php echo e($data->streetOld); ?>
-
-            <?php echo e($data->homeOld); ?>
-
-        </div>
-        </p>
-        <a href="<?php echo e(route('finishDriver')); ?>">Я приехал</a>
+        <a href="/home/driver" class="btn btn-secondary btn-lg">Я приехал</a>
     </div>
 <?php $__env->stopSection(); ?>
 

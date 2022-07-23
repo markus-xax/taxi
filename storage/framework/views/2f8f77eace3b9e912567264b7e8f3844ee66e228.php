@@ -1,11 +1,10 @@
 <?php $__env->startSection('title'); ?>Главная<?php $__env->stopSection(); ?>
 <?php $__env->startSection('body'); ?>
-    <p class="text-center"><b>Добро пожаловать на наш сервис для заказа онлайн-такси</b></p>
-    <p class="text-center">Для начала выберете ваше направление</p>
     <div class="container">
+        <p class="text-center"><b>Добро пожаловать на наш сайт</b>, для начала выберете ваше направление.</p>
         <div class="text-center">
-        <a class="btn btn-secondary" href="/form/orderYes" role="button">Я пассажир</a>
-        <a class="btn btn-secondary" href="/home/driver/LK" role="button">Я водитель</a>
+            <a class="btn btn-outline-secondary" href="/form/orderYes" role="button">Я пассажир</a>
+            <a class="btn btn-outline-secondary" href="/home/driver/LK" role="button">Я водитель</a>
         </div>
     </div>
 <?php $__env->stopSection(); ?>
